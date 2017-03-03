@@ -1,0 +1,5 @@
+0	testImages/WIN_20160803_11_28_42_Pro.jpg	0
+1	testImages/WIN_20160803_11_42_36_Pro.jpg	0
+2	testImages/WIN_20160803_11_46_03_Pro.jpg	0
+3	testImages/WIN_20160803_11_48_26_Pro.jpg	0
+4	testImages/WIN_20160803_12_37_07_Pro.jpg	0
