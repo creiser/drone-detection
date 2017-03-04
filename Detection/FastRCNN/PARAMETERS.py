@@ -16,7 +16,7 @@ datasetName = "Drones"
 # default parameters
 ############################
 # cntk params
-cntk_nrRois = 100      # how many ROIs to zero-pad. Use 100 to get quick result. Use 2000 to get good results.
+cntk_nrRois = 500      # how many ROIs to zero-pad. Use 100 to get quick result. Use 2000 to get good results.
 cntk_padWidth = 1000
 cntk_padHeight = 1000
 
@@ -86,13 +86,13 @@ if datasetName.startswith("Grocery"):
     for image_set in ["train", "test"]:
         imdbs[image_set] = imdb_data(image_set, classes, cntk_nrRois, imgDir, roiDir, cntkFilesDir, boAddGroundTruthRois = (image_set!='test'))
 
-if datasetName.startswith("Drones"):
+elif datasetName.startswith("Drones"):
     classes = ('__background__',  # always index 0
                'drone', 'dummy')
 
     # roi generation
-    roi_minDimRel = 0.04
-    roi_maxDimRel = 0.4
+    roi_minDimRel = 0.04 # 0.04
+    roi_maxDimRel = 1.0 # 0.4
     roi_minNrPixelsRel = 2    * roi_minDimRel * roi_minDimRel
     roi_maxNrPixelsRel = 0.33 * roi_maxDimRel * roi_maxDimRel
 
