@@ -6,7 +6,8 @@ from fastRCNN.pascal_voc import pascal_voc # as nmsPython
 print (datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S'))
 
 # dataset name
-datasetName = "Grocery"
+datasetName = "Drones"
+# datasetName = "Grocery"
 # datasetName = "pascalVoc"
 # datasetName = "pascalVoc_aeroplanesOnly"
 
@@ -62,6 +63,32 @@ if datasetName.startswith("Grocery"):
     classes = ('__background__',  # always index 0
                'avocado', 'orange', 'butter', 'champagne', 'eggBox', 'gerkin', 'joghurt', 'ketchup',
                'orangeJuice', 'onion', 'pepper', 'tomato', 'water', 'milk', 'tabasco', 'mustard')
+
+    # roi generation
+    roi_minDimRel = 0.04
+    roi_maxDimRel = 0.4
+    roi_minNrPixelsRel = 2    * roi_minDimRel * roi_minDimRel
+    roi_maxNrPixelsRel = 0.33 * roi_maxDimRel * roi_maxDimRel
+
+    # model training / scoring
+    classifier = 'nn'
+    cntk_num_train_images = 25
+    cntk_num_test_images = 5
+    cntk_mb_size = 5
+    cntk_max_epochs = 20
+    cntk_momentum_time_constant = 10
+
+    # postprocessing
+    nmsThreshold = 0.01
+
+    # database
+    imdbs = dict()      # database provider of images and image annotations
+    for image_set in ["train", "test"]:
+        imdbs[image_set] = imdb_data(image_set, classes, cntk_nrRois, imgDir, roiDir, cntkFilesDir, boAddGroundTruthRois = (image_set!='test'))
+
+if datasetName.startswith("Drones"):
+    classes = ('__background__',  # always index 0
+               'drone', 'dummy')
 
     # roi generation
     roi_minDimRel = 0.04

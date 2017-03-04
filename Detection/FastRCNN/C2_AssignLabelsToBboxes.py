@@ -12,10 +12,8 @@ from cntk_helpers import *
 ####################################
 # Parameters
 ####################################
-imgDir = "C:/Users/chazhang/Desktop/newImgs/"
-classes = ("avocado", "orange", "butter", "champagne", "cheese", "eggBox", "gerkin", "joghurt", "ketchup",
-           "orangeJuice", "onion", "pepper", "sausage", "tomato", "water", "apple", "milk",
-           "tabasco", "soySauce", "mustard", "beer")
+imgDir = "C:/Users/Christian/Entwicklung/drone-detection/DataSets/Drones/testImage"
+classes = ("drone", "dummy")
 
 #no need to change these
 drawingImgSize = 1000

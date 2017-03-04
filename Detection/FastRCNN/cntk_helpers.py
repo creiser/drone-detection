@@ -235,7 +235,7 @@ def parseCntkOutput(cntkImgsListPath, cntkOutputPath, outParsedDir, cntkNrRois, 
                 np.savez_compressed(outPath, data)
             else:
                 np.savez(outPath, data)
-        assert (fp.readline() == "")  # test if end-of-file is reached
+        #assert (fp.readline() == "")  # test if end-of-file is reached
 
 # parse the cntk labels file and return the labels
 def readCntkRoiLabels(roiLabelsPath, nrRois, roiDim, stopAtImgIndex = None):
