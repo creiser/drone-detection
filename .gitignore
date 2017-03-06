@@ -1,3 +1,4 @@
 Detection/FastRCNN/proc/
 *.pyc
 PretrainedModels/AlexNet.model
+DataSets/DronesRaw.zip
