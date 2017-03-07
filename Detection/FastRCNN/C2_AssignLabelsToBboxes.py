@@ -12,7 +12,7 @@ from cntk_helpers import *
 ####################################
 # Parameters
 ####################################
-imgDir = "C:/Users/Christian/Entwicklung/drone-detection/DataSets/Drones/testImage"
+imgDir = "../../DataSets/Drones/positive"
 classes = ("drone", "dummy")
 
 #no need to change these
