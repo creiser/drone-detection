@@ -7,7 +7,7 @@ from cntk_helpers import *
 ####################################
 # Parameters
 ####################################
-imgDir = "../../DataSets/Drones/positive"
+imgDir = "../../DataSets/Drones/testImages"
 
 # no need to change these params
 drawingImgSize = 1000.0
