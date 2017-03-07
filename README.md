@@ -10,3 +10,7 @@ Localization of quadcopters in images with [CNTK's implemententation of Fast R-C
 | number of images used for training                       | 350                              |
 | number of images used for testing                        | 150                              |
 | mAP                                                      | ~0.42                            |
+
+### Some cool results
+![alt text](https://github.com/creiser/drone-detection/blob/master/result.png "Logo Title Text 1")
+
