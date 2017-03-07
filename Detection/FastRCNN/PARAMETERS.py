@@ -98,10 +98,10 @@ elif datasetName.startswith("Drones"):
 
     # model training / scoring
     classifier = 'nn'
-    cntk_num_train_images = 25
-    cntk_num_test_images = 5
+    cntk_num_train_images = 350
+    cntk_num_test_images = 148
     cntk_mb_size = 5
-    cntk_max_epochs = 20
+    cntk_max_epochs = 30
     cntk_momentum_time_constant = 10
 
     # postprocessing
