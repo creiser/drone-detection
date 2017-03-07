@@ -42,8 +42,8 @@ for imgIndex in range(0, imdb.num_images):
 
     # visualize results
     imgDebug = visualizeResults(imgPath, labels, scores, imdb.roidb[imgIndex]['boxes'], cntk_padWidth, cntk_padHeight,
-                                classes, nmsKeepIndices, boDrawNegativeRois=True)
+                                classes, nmsKeepIndices, boDrawNegativeRois=False)
     imshow(imgDebug, waitDuration=0, maxDim = 800)
-    # imwrite(imgDebug, visualizationDir + "/" + str(imgIndex) + os.path.basename(imgPath))
+    imwrite(imgDebug, visualizationDir + "/" + str(imgIndex) + os.path.basename(imgPath))
 
 print ("DONE.")
